@@ -3,6 +3,13 @@ name: Update arXiv Subscriptions
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs daily at midnight UTC
+    
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
