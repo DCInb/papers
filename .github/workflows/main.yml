@@ -33,5 +33,5 @@ jobs:
         add: '*.index'
     - name: Push changes
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT }}
       run: git push origin main
