@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 # Only trigger, when the build workflow succeeded
 on:
   workflow_run:
-    workflows: ["CI build"]
+    workflows: ["Update arXiv Subscriptions"]
     types:
       - completed
 
