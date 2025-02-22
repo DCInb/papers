@@ -12,8 +12,8 @@
     <h1>Daily arXiv Subscriptions</h1>
     {% for paper in papers %}
     <div class="paper">
-        <h2><a href="{{ paper.link }}">{{ paper.title }}</a></h2>
-        <p><strong>Category:</strong> {{ paper.category }}</p>
+        <h2><a href="{{ paper.url }}">{{ paper.title }}</a></h2>
+        <p><strong>Time:</strong> {{ paper.published }}</p>
         <p><strong>Authors:</strong> {{ paper.authors }}</p>
         <p><strong>Abstract:</strong> {{ paper.summary }}</p>
     </div>
