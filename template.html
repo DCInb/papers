@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily arXiv Subscriptions</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #333; }
+        .paper { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Daily arXiv Subscriptions</h1>
+    {% for paper in papers %}
+    <div class="paper">
+        <h2><a href="{{ paper.link }}">{{ paper.title }}</a></h2>
+        <p><strong>Category:</strong> {{ paper.category }}</p>
+        <p><strong>Authors:</strong> {{ paper.authors }}</p>
+        <p><strong>Abstract:</strong> {{ paper.summary }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
