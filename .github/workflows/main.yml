@@ -30,7 +30,7 @@ jobs:
         author_name: Your Name
         author_email: mail@example.com
         message: 'Your commit message'
-        add: '*.index'
+        add: '*.html'
     - name: Push changes
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
