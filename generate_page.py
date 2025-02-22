@@ -7,7 +7,7 @@ import requests
 
 # Define search query and parameters
 query = "hydrodynamics"  # Modify this to your interest
-max_results = 3
+max_results = 5
 
 # Set up arXiv client
 client = arxiv.Client()
