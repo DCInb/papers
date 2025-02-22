@@ -21,7 +21,7 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install dependencies
-      run: pip install feedparser jinja2 arxiv
+      run: pip install feedparser jinja2 arxiv openai
     - name: Run script
       run: python generate_page.py
     - name: Add & Commit
