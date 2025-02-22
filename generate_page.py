@@ -5,11 +5,8 @@ from jinja2 import Environment, FileSystemLoader
 import time
 import requests
 
-# Set up OpenAI API key from environment variable
-openai.api_key = '9014dee5-9a23-44d1-b4fb-cc59c9ad0b6b'
-
 # Define search query and parameters
-query = "artificial intelligence"  # Modify this to your interest
+query = "hydrodynamics"  # Modify this to your interest
 max_results = 3
 
 # Set up arXiv client
