@@ -4,10 +4,13 @@ import openai
 from jinja2 import Environment, FileSystemLoader
 import time
 import requests
+import ssl
+import urllib.request
+import certifi
 
 # Define search query and parameters
-query = "hydrodynamics"  # Modify this to your interest
-max_results = 5
+query = "cat:astro-ph.HE"  # Modify this to your interest
+max_results = 10
 
 # Set up arXiv client
 client = arxiv.Client()
@@ -19,6 +22,11 @@ search = arxiv.Search(
     sort_by=arxiv.SortCriterion.SubmittedDate,
     sort_order=arxiv.SortOrder.Descending
 )
+
+# Set up an SSL context with certifi's CA bundle
+context = ssl.create_default_context(cafile=certifi.where())
+opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=context))
+urllib.request.install_opener(opener)
 
 papers = []
 
