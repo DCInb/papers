@@ -24,15 +24,10 @@ jobs:
       run: pip install feedparser jinja2 arxiv openai
     - name: Run script
       run: python generate_page.py
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
       with:
-        persist-credentials: true  # Preserve GITHUB_TOKEN for git commands
-
-    - name: Commit and Push
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Automated commit"
-        git push
+        author_name: Your Name
+        author_email: mail@example.com
+        message: 'Your commit message'
+        add: '*.js'
